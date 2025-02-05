@@ -4,3 +4,13 @@ body {
   margin: 0;
   padding: 0;
 }
+
+img {
+  max-width: 5%;
+}
+
+.navbar {
+  background-color: #333;
+  overflow: hidden;
+  display: flex;
+}
