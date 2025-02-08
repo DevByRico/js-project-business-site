@@ -6,11 +6,88 @@ body {
 }
 
 img {
-  max-width: 5%;
+  max-width: 100px;
+  /* Restricts image width to avoid layout issues */
 }
 
 .navbar {
-  background-color: #333;
-  overflow: hidden;
+  background-color: #333333;
   display: flex;
+  align-items: center;
+  padding: 10px 250px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-right: 100px;
+  /* Reduces spacing between logo and menu */
+}
+
+.navbar-left {
+  display: flex;
+  gap: 100px;
+  /* Reduces spacing between the links */
+  font-size: 20px;
+}
+
+.navbar-left a {
+  color: #ffffff;
+  text-align: center;
+  padding: 10px 12px;
+  text-decoration: none;
+}
+
+.navbar-left a:hover {
+  color: #e64a19;
+  /* Highlights links on hover */
+}
+
+.mainpage {
+  background-image: url("img/bakgrund.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+.mainpage h1 {
+  font-size: 3em;
+  margin: 0;
+}
+
+h1 {
+  background-color: #00000091;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+p {
+  background-color: #00000091;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.cta {
+  background-color: #000000d0;
+  color: white;
+  padding: 15px 30px;
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  /* Smooth transition effect */
+  position: relative;
+  top: 10px;
+}
+
+.cta:hover {
+  background-color: #e64a19;
+  /* Button changes color on hover */
 }
