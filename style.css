@@ -64,14 +64,14 @@ h1 {
   background-color: #00000091;
   color: white;
   padding: 10px 20px;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 p {
   background-color: #00000091;
   color: white;
   padding: 10px 20px;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .cta {
@@ -80,7 +80,7 @@ p {
   padding: 15px 30px;
   font-size: 18px;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 10px;
   transition: background-color 0.3s;
   /* Smooth transition effect */
   position: relative;
@@ -90,4 +90,103 @@ p {
 .cta:hover {
   background-color: #e64a19;
   /* Button changes color on hover */
+}
+
+.menu-header {
+  background-color: #ffa600;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin: 40px auto;
+  justify-content: center;
+  display: flex;
+  width: 300px;
+}
+
+.card {
+  background-color: #ffa600;
+  padding: 20px;
+  margin: 20px;
+  width: 300px;
+  border-radius: 10px;
+  display: flex;
+  /* Lägg till flexbox */
+  flex-direction: column;
+  /* Se till att innehållet placeras i en kolumn */
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.card h2 {
+  background-color: #00000000;
+  text-align: center;
+}
+
+.favorites {
+  justify-content: center;
+  display: flex;
+}
+
+.card:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  /* Adds a shadow effect on hover */
+}
+
+.card img {
+  width: 80%;
+  max-width: 250px;
+  max-height: 200px;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+.footer {
+  background-color: #333;
+  /* Mörk bakgrund för en elegant look */
+  color: white;
+  /* Vit text för kontrast */
+  text-align: center;
+  /* Centrera all text */
+  padding: 20px;
+  /* Lägg till utrymme runt texten */
+  font-size: 14px;
+  /* Gör texten lättläst */
+  border-top: 4px solid #ffa600;
+  /* Lägg till en orange linje längst upp */
+}
+
+.footer a {
+  color: #ffa600;
+  /* Orange färg för länkar */
+  text-decoration: none;
+  /* Ta bort understrykning */
+  font-weight: bold;
+  /* Gör länkarna mer framträdande */
+  margin: 0 5px;
+  /* Lägg till mellanrum mellan länkar */
+  transition: color 0.3s ease-in-out;
+  /* Mjuk övergång vid hover */
+}
+
+.footer a:hover {
+  color: #ffcc80;
+  /* Ljusare orange vid hover */
+}
+
+.footer p {
+  margin: 5px 0;
+  /* Liten marginal mellan stycken */
+  line-height: 1.5;
+  /* Gör texten luftigare */
+  background-color: #00000000;
+}
+
+@media (max-width: 600px) {
+  .footer {
+    font-size: 12px;
+    /* Gör texten mindre på mobil */
+    padding: 15px;
+    /* Minska padding för små skärmar */
+  }
 }
