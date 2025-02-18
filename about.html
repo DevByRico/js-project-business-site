@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Juizy Burger</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <body>
+    <div id="top"></div> <!-- Fix for smooth scroll -->
+  
+    <header>
+      <div class="navbar">
+        <div class="logo">
+          <a href="#top"><img src="img/juizy-burger-logo.png" alt="Juizy Burger"></a>
+        </div>
+        <div class="menu-toggle">☰</div>
+        <div class="navbar-right">
+          <a href="index.html">Home</a>
+          <a href="menu.html">Menu</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </header>
+  
+
+  <main>
+    <!-- Hero Section -->
+    <div class="hero">
+      <div class="hero-content">
+        <h1>About Juizy Burger</h1>
+        <p>Bringing You The Juiciest Burgers Since 2010</p>
+      </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="about-container">
+      <h2>Our Story</h2>
+      <p>
+        Juizy Burger started as a small food truck in 2010, driven by the passion for crafting the perfect burger.
+        Today, we've grown into a well-loved burger joint known for using high-quality ingredients and delivering
+        mouthwatering flavors to our customers.
+      </p>
+
+      <h2>What Makes Us Special?</h2>
+      <ul>
+        <li>🥩 100% fresh, never frozen beef</li>
+        <li>🥗 Locally sourced ingredients</li>
+        <li>🔥 Grilled to perfection</li>
+        <li>🤤 Unique signature sauces</li>
+      </ul>
+
+      <h2>Join Us</h2>
+      <p>
+        Whether you're craving a classic cheeseburger or looking for a gourmet experience, we have something for
+        everyone. Visit our <a href="menu.html">menu</a> to explore our delicious options.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer">
+      <p>
+        Follow us on
+        <a href="https://facebook.com" target="_blank">Facebook</a>
+        <a href="https://instagram.com" target="_blank">Instagram</a>
+        and <a href="https://twitter.com" target="_blank">Twitter</a> |
+        <a href="contact.html">Contact Us</a> |
+        <a href="privacy-policy.html">Privacy Policy</a>
+      </p>
+      <p>&copy; 2025 <strong>Juizy Burger</strong>. All Rights Reserved. | Developed & Designed by 
+        <strong><a href="https://github.com/RicardoNicolau" target="_blank">Ricardo Nicolau</a></strong>.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navbarRight = document.querySelector(".navbar-right");
+
+      menuToggle.addEventListener("click", function () {
+        navbarRight.classList.toggle("active");
+      });
+    });
+  </script>
+
+</body>
+
+</html>

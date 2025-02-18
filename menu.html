@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="top"></div> <!-- Smooth scroll fix -->
+
+  <header>
+    <div class="navbar">
+      <div class="logo">
+        <a href="#top"><img src="img/juizy-burger-logo.png" alt="Juizy Burger"></a>
+      </div>
+      <div class="menu-toggle">☰</div>
+      <div class="navbar-right">
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <h1 class="menu-header">Our Menu</h1>
+
+    <section class="menu">
+      <div class="menu-item">
+        <img src="img/juizy-classic.jpg" alt="Juizy Classic">
+        <h2>Juizy Classic</h2>
+        <p>Our classic burger made with 100% fresh beef, topped with cheese, lettuce, tomato, and our special sauce.</p>
+        <p class="price">€6.99</p>
+      </div>
+
+      <div class="menu-item">
+        <img src="img/gourmet-delight.jpg" alt="Gourmet Delight">
+        <h2>Gourmet Delight</h2>
+        <p>For those who crave something more, this burger is made with premium beef, bacon, avocado, and our signature sauce.</p>
+        <p class="price">€8.99</p>
+      </div>
+
+      <div class="menu-item">
+        <img src="img/vegetarian-bliss.jpg" alt="Vegetarian Bliss">
+        <h2>Vegetarian Bliss</h2>
+        <p>Our vegetarian burger is made with a plant-based patty, fresh lettuce, tomato, and melted cheese.</p>
+        <p class="price">€7.99</p>
+      </div>
+
+      <div class="menu-item">
+        <img src="img/family-favorites.jpg" alt="Family Favorites">
+        <h2>Family Favorites</h2>
+        <p>Perfect for sharing, this burger is made with 100% fresh beef, cheese, lettuce, tomato, and our special sauce.</p>
+        <p class="price">€12.99</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer">
+      <p>
+        Follow us on
+        <a href="https://facebook.com" target="_blank">Facebook</a>
+        <a href="https://instagram.com" target="_blank">Instagram</a>
+        and <a href="https://twitter.com" target="_blank">Twitter</a> |
+        <a href="contact.html">Contact Us</a> |
+        <a href="privacy-policy.html">Privacy Policy</a>
+      </p>
+      <p>&copy; 2025 <strong>Juizy Burger</strong>. All Rights Reserved. | Developed & Designed by 
+        <strong><a href="https://github.com/RicardoNicolau" target="_blank">Ricardo Nicolau</a></strong>.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navbarRight = document.querySelector(".navbar-right");
+
+      menuToggle.addEventListener("click", function () {
+        navbarRight.classList.toggle("active");
+      });
+    });
+  </script>
+
+</body>
+</html>
