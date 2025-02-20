@@ -54,6 +54,40 @@ img {
   color: #ffa600;
 }
 
+/* Dark Mode Styles */
+.dark-mode {
+  background-color: #222;
+  color: white;
+}
+
+.dark-mode .navbar {
+  background-color: #111;
+}
+
+.dark-mode .footer {
+  background-color: #111;
+}
+
+.dark-mode .menu-item {
+  background-color: #444;
+  color: white;
+}
+
+.dark-mode .menu-item p {
+  color: white;
+}
+
+/* Dark Mode Button */
+#dark-mode-toggle {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 20px;
+  color: white;
+}
+
+
 /* Fix for spacing under navbar */
 main {
   padding-top: 100px;
@@ -266,24 +300,6 @@ p {
   margin: 10px 0;
 }
 
-/* Call-to-Action */
-.cta {
-  background-color: #e64a19;
-  color: white;
-  padding: 15px 30px;
-  font-size: 18px;
-  text-decoration: none;
-  border-radius: 50px;
-  transition: all 0.3s ease-in-out;
-  display: inline-block;
-}
-
-.cta:hover {
-  background-color: #ffa600;
-  transform: scale(1.1);
-}
-
-
 /* Card Design */
 .card {
   background-color: #ffa600;
@@ -393,6 +409,7 @@ p {
   padding: 20px;
   font-size: 14px;
   border-top: 4px solid #ffa600;
+  margin-top: 45px;
 }
 
 .footer a {
@@ -439,6 +456,70 @@ p {
     display: block; /*Show the hamburger menu*/
     margin-right: 50px;
   }
+
+/* Hamburger Menu Styling */
+.menu-toggle {
+  display: block;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Rotates menu icon when active */
+.menu-toggle.active {
+  transform: rotate(90deg);
+}
+
+/* Mobile Navbar */
+.navbar-right {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: #333;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Slide-in effect when menu opens */
+.navbar-right.active {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Style for menu links */
+.navbar-right a {
+  display: block;
+  padding: 15px;
+  color: white;
+  text-decoration: none;
+}
+
+/* Ensure smooth transition for menu links */
+.navbar-right.active a {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Animation for menu links */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
   .navbar-right {
     display: none;
