@@ -87,7 +87,6 @@ img {
   color: white;
 }
 
-
 /* Fix for spacing under navbar */
 main {
   padding-top: 100px;
@@ -111,14 +110,7 @@ main {
   margin: 0;
 }
 
-h1 {
-  background-color: #00000091;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 10px;
-}
-
-p {
+h1, p {
   background-color: #00000091;
   color: white;
   padding: 10px 20px;
@@ -373,6 +365,14 @@ p {
   background-attachment: fixed;
 }
 
+input:focus,
+textarea:focus {
+  border: 2px solid #472f01;
+  outline: none;
+  box-shadow: 0 0 8px #664406b3;
+}
+
+
 /* Form inputs */
 .form-input {
   display: flex;
@@ -503,11 +503,6 @@ p {
   text-decoration: none;
 }
 
-/* Ensure smooth transition for menu links */
-.navbar-right.active a {
-  animation: fadeIn 0.5s ease-in-out;
-}
-
 /* Animation for menu links */
 @keyframes fadeIn {
   from {
@@ -519,7 +514,6 @@ p {
     transform: translateY(0);
   }
 }
-
 
   .navbar-right {
     display: none;
