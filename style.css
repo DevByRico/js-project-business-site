@@ -200,7 +200,6 @@ h1, p {
   }
 }
 
-
 /* Hero Section */
 .hero {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("img/bakgrund.jpg");
@@ -260,15 +259,16 @@ h1, p {
   .hero h1 {
     font-size: 2.5em;
   }
+
   .hero p {
     font-size: 1.2em;
   }
+
   .cta {
     padding: 12px 30px;
     font-size: 1em;
   }
 }
-
 
 /* About Section */
 .about-container {
@@ -342,9 +342,8 @@ h1, p {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 70vh;
+  min-height: 90vh;
   padding-top: 100px;
-  margin-bottom: 35px;
 }
 
 .contact-form {
@@ -372,6 +371,54 @@ textarea:focus {
   box-shadow: 0 0 8px #664406b3;
 }
 
+.contact-form h1 {
+  font-size: 2.2em;
+  margin-bottom: 20px;
+}
+
+.contact-form p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+
+.contact-form .form-input label {
+  font-size: 1.1em;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.contact-form .form-input input,
+.contact-form .form-input textarea {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+.contact-form .form-input input:focus,
+.contact-form .form-input textarea:focus {
+  border-color: #472f01;
+  box-shadow: 0 0 8px rgba(102, 68, 6, 0.7);
+}
+
+.contact-form button[type="submit"] {
+  padding: 12px 20px;
+  font-size: 1.1em;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button[type="submit"]:hover {
+  background-color: #222;
+}
 
 /* Form inputs */
 .form-input {
@@ -401,7 +448,7 @@ textarea:focus {
   background-color: #222;
 }
 
-/*Footer*/
+/* Footer */
 .footer {
   background-color: #333;
   color: white;
@@ -430,7 +477,7 @@ textarea:focus {
   background-color: transparent;
 }
 
-/*Hamburger Menu*/
+/* Hamburger Menu */
 .menu-toggle {
   display: none;
   font-size: 30px;
@@ -439,7 +486,7 @@ textarea:focus {
   padding: 10px;
 }
 
-/* Customize navbar for mobile*/
+/* Customize navbar for mobile */
 @media (max-width: 768px) {
   .navbar {
     display: flex;
@@ -449,77 +496,69 @@ textarea:focus {
   }
 
   .logo {
-    margin-left: 0; /*Move the logo to the left*/
+    margin-left: 0; /* Move the logo to the left */
   }
 
   .menu-toggle {
-    display: block; /*Show the hamburger menu*/
+    display: block; /* Show the hamburger menu */
     margin-right: 50px;
+    transition: transform 0.3s ease-in-out;
   }
 
-/* Hamburger Menu Styling */
-.menu-toggle {
-  display: block;
-  font-size: 30px;
-  color: white;
-  cursor: pointer;
-  padding: 10px;
-  transition: transform 0.3s ease-in-out;
-}
+  .menu-toggle.active {
+    transform: rotate(90deg);
+  }
 
-/* Rotates menu icon when active */
-.menu-toggle.active {
-  transform: rotate(90deg);
-}
-
-/* Mobile Navbar */
-.navbar-right {
-  display: none;
-  flex-direction: column;
-  position: absolute;
-  top: 60px;
-  right: 0;
-  background-color: #333;
-  width: 100%;
-  text-align: center;
-  padding: 10px 0;
-  opacity: 0;
-  transform: translateY(-10px);
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-}
-
-/* Slide-in effect when menu opens */
-.navbar-right.active {
-  display: flex;
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Style for menu links */
-.navbar-right a {
-  display: block;
-  padding: 15px;
-  color: white;
-  text-decoration: none;
-}
-
-/* Animation for menu links */
-@keyframes fadeIn {
-  from {
+  /* Mobile Navbar */
+  /*
+  .navbar-right {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #333;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
     opacity: 0;
     transform: translateY(-10px);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
   }
-  to {
+  */
+
+  /* Slide-in effect when menu opens */
+  .navbar-right.active {
+    display: flex;
     opacity: 1;
     transform: translateY(0);
   }
-}
+
+  /* Style for menu links */
+  .navbar-right a {
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+  }
+
+  /* Animation for menu links */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
   .navbar-right {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 120px; /*Lower the hamburger menu so it doesn't overlap the logo*/
+    top: 110px; /* Lower the hamburger menu so it doesn't overlap the logo */
     right: 0;
     background-color: #333;
     width: 100%;
@@ -555,5 +594,69 @@ textarea:focus {
 @media (max-width: 767px) {
   .favorites {
     grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  body {
+    font-size: 12px;
+  }
+
+  .navbar {
+    padding: 5px 10px;
+  }
+
+  .logo {
+    margin-left: 0; /* Tar bort extra margin som skjuter ut logotypen */
+  }
+
+  .navbar-right a {
+    padding: 5px;
+    font-size: 14px;
+  }
+
+  .mainpage {
+    padding: 10px;
+  }
+
+  .hero h1 {
+    font-size: 2em;
+  }
+
+  .hero p {
+    font-size: 1em;
+  }
+
+  .menu-header {
+    width: 90%;
+    margin: 20px auto;
+    padding: 8px;
+    font-size: 1em;
+  }
+
+  .menu {
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .menu-item {
+    margin: 10px auto;
+    padding: 10px;
+    max-width: 90%;
+  }
+
+  .contact-form {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .contact-page {
+    /* Använd scroll istället för fixed på bakgrunden */
+    background-attachment: scroll;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
   }
 }
